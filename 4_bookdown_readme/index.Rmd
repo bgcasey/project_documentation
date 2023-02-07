@@ -1,17 +1,16 @@
 ---
 title: "Climate downscaling"
 author: "Brendan Casey"
-#supervisor: 
 site: bookdown::bookdown_site
 output: 
   md_document:
     variant: gfm
     toc: TRUE
     toc_depth: 2
+    number_sections: TRUE
 #bibliography: library.bib
 #citation-style: ../../MendeleyBib/CitationStyles/nature.csl
 #citation-style: https://www.zotero.org/styles/elsevier-harvard
-# documentclass: book
 link-citations: true
 github-repo: https://github.com/bgcasey/project_documentation
 description: "This is document walks through the analyses I performed for this research."

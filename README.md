@@ -1,15 +1,16 @@
-- <a href="#overview" id="toc-overview">Overview</a>
-- <a href="#example-project" id="toc-example-project">Example Project</a>
-  - <a href="#response-variables" id="toc-response-variables">Response
+- <a href="#overview" id="toc-overview">1 Overview</a>
+- <a href="#example-project" id="toc-example-project">2 Example
+  Project</a>
+  - <a href="#response-variables" id="toc-response-variables">2.1 Response
     variables</a>
-  - <a href="#predictor-variables" id="toc-predictor-variables">Predictor
-    variables</a>
-  - <a href="#simulations" id="toc-simulations">Simulations</a>
-  - <a href="#models" id="toc-models">Models</a>
+  - <a href="#predictor-variables" id="toc-predictor-variables">2.2
+    Predictor variables</a>
+  - <a href="#simulations" id="toc-simulations">2.3 Simulations</a>
+  - <a href="#models" id="toc-models">2.4 Models</a>
 
-# Overview
+# 1 Overview
 
-# Example Project
+# 2 Example Project
 
 **Project description**
 
@@ -23,7 +24,7 @@ arms while you’re using the keyboard. Immediately regret falling into
 bathtub just going to dip my paw in your coffee and do a taste test - oh
 never mind i forgot i don’t like coffee - you can have that back now.
 
-## Response variables
+## 2.1 Response variables
 
 Below are the instructions and code for getting data from wildtrax that
 was developed by Elly Knight. The original rScripts are available
@@ -32,7 +33,7 @@ was developed by Elly Knight. The original rScripts are available
 *See the wildRtrax article here for more details on authentication:*
 <https://abbiodiversity.github.io/wildRtrax/articles/authenticating-into-wt.html>
 
-### Get data from WildTrax
+### 2.1.1 Get data from WildTrax
 
 1.  **Load packages**
 
@@ -98,9 +99,9 @@ dat.test <- do.call(rbind, dat.list)
 save(dat, projects.test, error.log, file=paste0("Data/wildtrax_raw_", Sys.Date(), ".Rdata"))
 ```
 
-## Predictor variables
+## 2.2 Predictor variables
 
-### Google Earth Engine functions
+### 2.2.1 Google Earth Engine functions
 
 The following javascript functions can be used to extract Landsat
 variables within the Google Earth Engine code editor.
@@ -162,9 +163,9 @@ exports.addBSI =function(image) {
 }
 ```
 
-## Simulations
+## 2.3 Simulations
 
-### bSims
+### 2.3.1 bSims
 
 Simulations using bSims: Bird Point Count Simulator.
 
@@ -197,9 +198,9 @@ head(get_events(a))
 head(get_detections(o))
 ```
 
-## Models
+## 2.4 Models
 
-### Import data
+### 2.4.1 Import data
 
 ``` r
 data(mtcars)
@@ -214,13 +215,13 @@ head(mtcars)
     ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
     ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
-### Linear Regression
+### 2.4.2 Linear Regression
 
 ``` r
 model <- lm(mpg ~ wt, data = mtcars)
 ```
 
-### Model summary
+### 2.4.3 Model summary
 
 ``` r
 summary(model)
@@ -245,7 +246,7 @@ summary(model)
     ## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
     ## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10
 
-### Model plots
+### 2.4.4 Model plots
 
 ``` r
 library(ggplot2)
@@ -268,7 +269,7 @@ Regression figure.
 
 </div>
 
-### Make predictions
+### 2.4.5 Make predictions
 
 ``` r
 predictions <- predict(model, newdata=data.frame(wt=c(3,4)))
