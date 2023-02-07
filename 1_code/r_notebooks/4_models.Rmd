@@ -27,7 +27,7 @@ summary(model)
 
 
 ### Model plots
-```{r}
+```{r eval=FALSE}
 library(ggplot2)
 
 # Create a scatterplot
@@ -35,7 +35,16 @@ ggplot(mtcars, aes(x=wt, y=mpg)) +
   geom_point() +
   geom_smooth(method='lm', se=FALSE) +
   ggtitle("Linear Regression of mpg vs wt")
+
+ggsave("3_output/figures/regression.png")
 ```
+
+
+```{r regression, echo=FALSE, fig.cap= "Regression figure.", out.width = "80%"}
+knitr::include_graphics("3_output/figures/regression.png")
+```
+
+
 
 ### Make predictions
 ```{r}

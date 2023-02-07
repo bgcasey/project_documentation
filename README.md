@@ -255,11 +255,18 @@ ggplot(mtcars, aes(x=wt, y=mpg)) +
   geom_point() +
   geom_smooth(method='lm', se=FALSE) +
   ggtitle("Linear Regression of mpg vs wt")
+
+ggsave("3_output/figures/regression.png")
 ```
 
-    ## `geom_smooth()` using formula 'y ~ x'
+<div class="figure">
 
-![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+<img src="3_output/figures/regression.png" alt="Regression figure." width="80%" />
+<p class="caption">
+Regression figure.
+</p>
+
+</div>
 
 ### Make predictions
 
