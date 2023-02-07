@@ -48,10 +48,10 @@ markdown.
 
 3.  Using markdown to prepare manuscripts/ write papers
 
-    1.  [Custom templates in
-        bookdown](https://bookdown.org/yihui/rmarkdown-cookbook/latex-template.html)
+    - [Custom templates in
+      bookdown](https://bookdown.org/yihui/rmarkdown-cookbook/latex-template.html)
 
-    2.  [rticles R package](https://github.com/rstudio/rticles)
+    - [rticles R package](https://github.com/rstudio/rticles)
 
 # 2 Example Project
 
