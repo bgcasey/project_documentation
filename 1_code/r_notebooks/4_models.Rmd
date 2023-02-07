@@ -1,0 +1,45 @@
+## Models
+
+```{r setup, include=FALSE, cache=FALSE}
+#Set root directory to R project root
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+
+### Import data
+
+```{r}
+data(mtcars)
+head(mtcars)
+```
+
+
+### Linear Regression
+```{r eval=FALSE}
+model <- lm(mpg ~ wt, data = mtcars)
+```
+
+### Model summary
+
+```{r eval=FALSE}
+summary(model)
+```
+
+
+### Model plots
+```{r eval=FALSE}
+library(ggplot2)
+
+# Create a scatterplot
+ggplot(mtcars, aes(x=wt, y=mpg)) +
+  geom_point() +
+  geom_smooth(method='lm', se=FALSE) +
+  ggtitle("Linear Regression of mpg vs wt")
+```
+
+### Make predictions
+```{r eval=FALSE}
+predictions <- predict(model, newdata=data.frame(wt=c(3,4)))
+predictions
+```
+

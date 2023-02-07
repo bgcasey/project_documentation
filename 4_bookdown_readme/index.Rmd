@@ -1,0 +1,58 @@
+---
+title: "Climate downscaling"
+author: "Brendan Casey"
+#supervisor: 
+site: bookdown::bookdown_site
+output: 
+  md_document:
+    variant: gfm
+    toc: TRUE
+    toc_depth: 2
+#bibliography: library.bib
+#citation-style: ../../MendeleyBib/CitationStyles/nature.csl
+#citation-style: https://www.zotero.org/styles/elsevier-harvard
+documentclass: book
+link-citations: true
+github-repo: https://github.com/bgcasey/project_documentation
+description: "This is document walks through the analyses I performed for this research."
+---
+
+# Overview
+
+```{r GlobalOptions, echo=FALSE}
+options(bookdown.render.file_scope = FALSE, knitr.duplicate.label = "allow") 
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+```{r setup, include=FALSE, cache=FALSE}
+#Set root directory to R project root
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+```{r echo=FALSE, out.width = '100%'}
+library(kableExtra)
+library(knitr)
+```
+
+# Example Project
+
+**Project description**
+
+Get scared by doggo also cucumerro hide from vacuum cleaner so eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter lick the other cats chirp at birds. Cats are fats i like to pets them they like to meow back annoy the old grumpy cat, start a fight and then retreat to wash when i lose and i'm going to lap some water out of my master's cup meow. Meowing chowing and wowing. Lay on arms while you're using the keyboard. Immediately regret falling into bathtub just going to dip my paw in your coffee and do a taste test - oh never mind i forgot i don't like coffee - you can have that back now. 
+
+
+
+
+```{r child = '1_code/r_notebooks/1_reponse_variables.Rmd'}
+```
+
+```{r child = '1_code/r_notebooks/2_predictor_variables.Rmd'}
+```
+
+```{r child = '1_code/r_notebooks/3_simulations.Rmd'}
+```
+
+```{r child = '1_code/r_notebooks/4_models.Rmd'}
+```
+
+

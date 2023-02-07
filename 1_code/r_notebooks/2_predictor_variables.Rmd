@@ -1,0 +1,66 @@
+## Predictor variables
+
+```{r setup, include=FALSE, cache=FALSE}
+#Set root directory to R project root
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+
+
+### Google Earth Engine functions
+The following javascript functions can be used to extract Landsat variables within the Google Earth Engine code editor.
+
+#### Landsat {-}
+Apply scaling factors
+```{js eval=FALSE}
+exports.applyScaleFactors =function(image) {
+  var opticalBands = image.select('SR_B.').multiply(0.0000275).add(-0.2);
+  var thermalBand = image.select('ST_B6').multiply(0.00341802).add(149.0);
+  return image.addBands(opticalBands, null, true)
+              .addBands(thermalBand, null, true);
+}
+```
+
+
+Cloud and snow mask
+```{js eval=FALSE}
+exports.mask_cloud_snow =function(image) {
+    var qa = image.select('QA_PIXEL'); 
+    var cloudsBitMask = (1 << 3); // Get bit 3: cloud mask
+    var cloudShadowBitMask = (1 << 4); // Get bit 4: cloud shadow mask
+    var snowBitMask = (1 << 5); // Get bit 5: snow mask
+    var mask = qa.bitwiseAnd(cloudsBitMask).eq(0).and
+          (qa.bitwiseAnd(cloudShadowBitMask).eq(0)).and
+          (qa.bitwiseAnd(snowBitMask).eq(0));
+return image.updateMask(mask);
+}
+```
+
+
+Function to adding a calculated  Leaf Area Index (LAI) band
+```{js eval=FALSE}
+exports.addLAI =function(image) {
+  var LAI = image.expression(
+        '3.618 *(2.5 * ((NIR - RED) / (NIR + 6 * RED - 7.5 * BLUE + 1)))-0.118', {
+            'NIR': image.select('SR_B4'),
+            'RED': image.select('SR_B3'),
+            'BLUE': image.select('SR_B1')
+        }).rename('LAI')
+  return image.addBands([LAI])
+} 
+```
+
+Function to adding a calculated Bare Soil Index (BSI) band
+```{js eval=FALSE}
+exports.addBSI =function(image) {
+  var BSI =image.expression(
+        '((Red+SWIR) - (NIR+Blue)) / ((Red+SWIR) + (NIR+Blue))', {
+          'NIR': image.select('SR_B4'),
+          'Red': image.select('SR_B3'),
+          'Blue': image.select('SR_B1'),
+          'SWIR': image.select('SR_B5') 
+        }).rename('BSI')
+    return image.addBands([BSI])
+}
+```
+

@@ -1,0 +1,40 @@
+## Simulations
+
+```{r setup, include=FALSE, cache=FALSE}
+#Set root directory to R project root
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+### bSims
+
+Simulations using bSims: Bird Point Count Simulator.
+
+1.  Install packages
+
+```{r eval=FALSE}
+install.packages("bSims")
+```
+
+```{r eval=FALSE}
+library(bSims)
+
+phi <- 0.5
+tau <- 1:3
+dur <- 10
+rbr <- c(0.5, 1, 1.5, Inf)
+tbr <- c(3, 5, 10)
+
+l <- bsims_init(10, 0.5, 1)
+p <- bsims_populate(l, 1)
+a <- bsims_animate(p, vocal_rate=phi, duration=dur)
+o <- bsims_detect(a, tau=tau)
+
+x <- bsims_transcribe(o, tint=tbr, rint=rbr)
+
+get_table(x)
+
+
+head(get_events(a))
+head(get_detections(o))
+
+```
