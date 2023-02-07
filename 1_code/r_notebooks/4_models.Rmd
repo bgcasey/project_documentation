@@ -15,19 +15,19 @@ head(mtcars)
 
 
 ### Linear Regression
-```{r eval=FALSE}
+```{r}
 model <- lm(mpg ~ wt, data = mtcars)
 ```
 
 ### Model summary
 
-```{r eval=FALSE}
+```{r}
 summary(model)
 ```
 
 
 ### Model plots
-```{r eval=FALSE}
+```{r}
 library(ggplot2)
 
 # Create a scatterplot
@@ -38,7 +38,7 @@ ggplot(mtcars, aes(x=wt, y=mpg)) +
 ```
 
 ### Make predictions
-```{r eval=FALSE}
+```{r}
 predictions <- predict(model, newdata=data.frame(wt=c(3,4)))
 predictions
 ```

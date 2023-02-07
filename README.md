@@ -226,6 +226,25 @@ model <- lm(mpg ~ wt, data = mtcars)
 summary(model)
 ```
 
+    ## 
+    ## Call:
+    ## lm(formula = mpg ~ wt, data = mtcars)
+    ## 
+    ## Residuals:
+    ##     Min      1Q  Median      3Q     Max 
+    ## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+    ## 
+    ## Coefficients:
+    ##             Estimate Std. Error t value Pr(>|t|)    
+    ## (Intercept)  37.2851     1.8776  19.858  < 2e-16 ***
+    ## wt           -5.3445     0.5591  -9.559 1.29e-10 ***
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 3.046 on 30 degrees of freedom
+    ## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+    ## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10
+
 ### Model plots
 
 ``` r
@@ -238,11 +257,18 @@ ggplot(mtcars, aes(x=wt, y=mpg)) +
   ggtitle("Linear Regression of mpg vs wt")
 ```
 
+    ## `geom_smooth()` using formula 'y ~ x'
+
+![](README_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+
 ### Make predictions
 
 ``` r
 predictions <- predict(model, newdata=data.frame(wt=c(3,4)))
 predictions
 ```
+
+    ##        1        2 
+    ## 21.25171 15.90724
 
 <!--chapter:end:index.Rmd-->
