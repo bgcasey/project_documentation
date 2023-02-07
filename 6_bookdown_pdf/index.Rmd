@@ -34,6 +34,12 @@ library(kableExtra)
 library(knitr)
 ```
 
+```{r child = '1_code/r_notebooks/0_overview.Rmd'}
+```
+
+
+
+
 # Example Project
 
 **Project description**

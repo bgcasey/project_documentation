@@ -1,0 +1,68 @@
+book_filename: "chapter_1.Rmd"
+language:
+  ui:
+    chapter_name: ""
+delete_merged_file: true
+output_dir: 3_output/book
+rmd_files: ["index.Rmd"]
+
+
+
+
+
+
+# ["index.Rmd", "1_code/rNotebooks/scrivenerMDs/introduction.md", "1_code/rNotebooks/workflow/workflow_overview.Rmd", "1_code/rNotebooks/workflow/setup.Rmd",
+# "1_code/rNotebooks/workflow/covariates/extract_CASFRI_data.Rmd", "1_code/rNotebooks/workflow/birdData/import_birdData.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/0_bufferCASFRI.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/1_summarizeLiDAR.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/extractNBR.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/exploreData.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/checkForOutliers.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/simpleLinearRelationships.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/checkCollinearity.Rmd",
+# "1_code/rNotebooks/results/results.Rmd","1_code/rNotebooks/references.Rmd", "1_code/rNotebooks/references.Rmd"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#"index.Rmd", "1_code/rNotebooks/1_test_report.md", "1_code/rNotebooks/2_summarizeLiDAR.Rmd", "1_code/rNotebooks/references.Rmd"]
+
+#"1_code/rNotebooks/1_summarizeLiDAR.Rmd"
+
+#"1_code/rNotebooks/figures.Rmd",
+
+# "1_code/rNotebooks/workflow/setup.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/extract_CASFRI_data.Rmd",
+# 
+# "1_code/rNotebooks/workflow/birdData/import_birdData.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/0_bufferCASFRI.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/1_summarizeLiDAR.Rmd",
+# 
+# "1_code/rNotebooks/workflow/covariates/extractNBR.Rmd",
+# 
+# "1_code/rNotebooks/workflow/dataExploration/checkForOutliers.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/simpleLinearRelationships.Rmd",
+# "1_code/rNotebooks/workflow/dataExploration/checkCollinearity.Rmd",
+
+
+
+# ["index.Rmd", "1_code/rNotebooks/scrivenerMDs/introduction.md", "1_code/rNotebooks/workflow/workflow.Rmd", 
+# "1_code/rNotebooks/results/results.Rmd","1_code/rNotebooks/references.Rmd"]

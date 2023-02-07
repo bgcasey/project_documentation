@@ -1,41 +1,61 @@
----
-title: "Climate downscaling"
+--- 
+title: "The influence of LiDAR acquisition time lag on bird species distribution models"
 author: "Brendan Casey"
 site: bookdown::bookdown_site
 output: 
-  md_document:
-    variant: gfm
-    toc: TRUE
-    toc_depth: 2
-    number_sections: TRUE
-#bibliography: library.bib
-#citation-style: ../../MendeleyBib/CitationStyles/nature.csl
-#citation-style: https://www.zotero.org/styles/elsevier-harvard
+    bookdown::gitbook:
+      split_by: "section"
+      split_bib: no
+# bibliography: ../../../zotero/library1.bib   
+# citation-style: ../../MendeleyBib/CitationStyles/ecology.csl
+documentclass: book
 link-citations: true
 github-repo: https://github.com/bgcasey/project_documentation
 description: "This is document walks through the analyses I performed for this research."
+
+
 ---
+
 
 # Overview
 
+
 ```{r GlobalOptions, echo=FALSE}
 options(bookdown.render.file_scope = FALSE, knitr.duplicate.label = "allow") 
+knitr::opts_chunk$set(cache.path = "5_cache/")
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
+
 
 ```{r setup, include=FALSE, cache=FALSE}
 #Set root directory to R project root
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
 
+
+
+```{css, echo=FALSE}
+# set max height of code chunks using the following css styling
+
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 500px;
+}
+```
+
+
 ```{r echo=FALSE, out.width = '100%'}
 library(kableExtra)
 library(knitr)
 ```
 
-
 ```{r child = '1_code/r_notebooks/0_overview.Rmd'}
 ```
+
 
 
 
@@ -61,3 +81,12 @@ Get scared by doggo also cucumerro hide from vacuum cleaner so eat a rug and fur
 ```
 
 
+
+# References
+
+
+<div id="refs"></div>
+
+
+
+# Appendix

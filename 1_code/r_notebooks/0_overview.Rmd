@@ -1,0 +1,25 @@
+Here we provide templates and resources for documenting your research from within your rProject.
+
+`4_bookdown_readme`: A template for creating a markdown readme using bookdown
+
+`5_bookdown_html`: A template for creating a project html document
+
+`6_bookdown_pdf`: A template for creating pdf documents
+
+`7_markdown_manuscript`: A template for writing your manuscript via markdown.
+
+## Resources {.unnumbered}
+
+1.  Bookdown resources
+
+    -   [Bookdown guide](https://bookdown.org/yihui/bookdown/)
+
+2.  Markdown resources
+
+    -   [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
+3.  Using markdown to prepare manuscripts/ write papers
+
+    1.  [Custom templates in bookdown](https://bookdown.org/yihui/rmarkdown-cookbook/latex-template.html)
+
+    2.  [rticles R package](https://github.com/rstudio/rticles)

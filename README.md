@@ -1,4 +1,5 @@
 - <a href="#overview" id="toc-overview">1 Overview</a>
+  - <a href="#resources" id="toc-resources">Resources</a>
 - <a href="#example-project" id="toc-example-project">2 Example
   Project</a>
   - <a href="#response-variables" id="toc-response-variables">2.1 Response
@@ -9,6 +10,36 @@
   - <a href="#models" id="toc-models">2.4 Models</a>
 
 # 1 Overview
+
+Here we provide templates and resources for documenting your research
+from within your rProject.
+
+`4_bookdown_readme`: A template for creating a markdown readme using
+bookdown
+
+`5_bookdown_html`: A template for creating a project html document
+
+`6_bookdown_pdf`: A template for creating pdf documents
+
+`7_markdown_manuscript`: A template for writing your manuscript via
+markdown.
+
+## Resources
+
+1.  Bookdown resources
+
+    - [Bookdown guide](https://bookdown.org/yihui/bookdown/)
+
+2.  Markdown resources
+
+    - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
+3.  Using markdown to prepare manuscripts/ write papers
+
+    1.  [Custom templates in
+        bookdown](https://bookdown.org/yihui/rmarkdown-cookbook/latex-template.html)
+
+    2.  [rticles R package](https://github.com/rstudio/rticles)
 
 # 2 Example Project
 
