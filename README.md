@@ -18,6 +18,7 @@ from within your rProject.
 bookdown
 
 `5_bookdown_html`: A template for creating a project html document
+(<https://bookdown.org/bgcasey/project_documentation/>)
 
 `6_bookdown_pdf`: A template for creating pdf documents
 
@@ -29,6 +30,17 @@ markdown.
 1.  Bookdown resources
 
     - [Bookdown guide](https://bookdown.org/yihui/bookdown/)
+    - [Bookdown overview](https://bookdown.org/)
+    - Getting started
+      - [Setup](https://bookdown.org/yihui/bookdown/get-started.html)
+
+      - [Chunk options](https://yihui.org/knitr/options/)
+
+      - [Inserting
+        figures](https://bookdown.org/yihui/bookdown/figures.html)
+
+      - [Inserting
+        tables](https://bookdown.org/yihui/bookdown/tables.html)
 
 2.  Markdown resources
 

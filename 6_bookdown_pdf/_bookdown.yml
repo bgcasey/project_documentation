@@ -1,4 +1,4 @@
-book_filename: "../README.Rmd"
+book_filename: "../README"
 language:
   ui:
     chapter_name: ""

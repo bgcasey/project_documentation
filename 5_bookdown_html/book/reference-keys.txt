@@ -1,0 +1,17 @@
+fig:regression
+overview
+example-project
+response-variables
+get-data-from-wildtrax
+predictor-variables
+google-earth-engine-functions
+simulations
+bsims
+models
+import-data
+linear-regression
+model-summary
+model-plots
+make-predictions
+references
+appendix

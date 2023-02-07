@@ -1,5 +1,5 @@
 --- 
-title: "The influence of LiDAR acquisition time lag on bird species distribution models"
+title: "Project Documentation"
 author: "Brendan Casey"
 site: bookdown::bookdown_site
 output: 
@@ -30,6 +30,14 @@ knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```{r setup, include=FALSE, cache=FALSE}
 #Set root directory to R project root
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+
+```{r echo=FALSE}
+## to publish the book
+# setwd("5_bookdown_html")
+# render(book)
+# publish_book(name=project_documentation)
 ```
 
 

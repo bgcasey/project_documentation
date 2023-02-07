@@ -1,5 +1,5 @@
 ---
-title: "Climate downscaling"
+title: "Project Documentation"
 author: "Brendan Casey"
 site: bookdown::bookdown_site
 output: 

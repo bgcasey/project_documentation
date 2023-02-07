@@ -1,7 +1,6 @@
 ---
 title: "Project Documentation"
 author: "Brendan Casey"
-site: bookdown::bookdown_site
 output: 
   pdf_document:
     toc: TRUE
