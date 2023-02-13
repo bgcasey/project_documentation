@@ -1,0 +1,574 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Project Documentation},
+  pdfauthor={Brendan Casey},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Project Documentation}
+\author{Brendan Casey}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{overview}{%
+\section{Overview}\label{overview}}
+
+Here we provide templates and resources for documenting your research
+from within your rProject.
+
+\texttt{4\_bookdown\_readme}: A template for creating a markdown readme
+using bookdown
+
+\texttt{5\_bookdown\_html}: A template for creating a project html
+document (\url{https://bookdown.org/bgcasey/project_documentation/})
+
+\texttt{6\_bookdown\_pdf}: A template for creating pdf documents
+
+\texttt{7\_markdown\_manuscript}: A template for writing your manuscript
+via markdown.
+
+\hypertarget{resources}{%
+\subsection*{Resources}\label{resources}}
+\addcontentsline{toc}{subsection}{Resources}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Bookdown resources
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://bookdown.org/yihui/bookdown/}{Bookdown guide}
+  \item
+    \href{https://bookdown.org/}{Bookdown overview}
+  \item
+    Getting started
+
+    \begin{itemize}
+    \item
+      \href{https://bookdown.org/yihui/bookdown/get-started.html}{Setup}
+    \item
+      \href{https://yihui.org/knitr/options/}{Chunk options}
+    \item
+      \href{https://bookdown.org/yihui/bookdown/figures.html}{Inserting
+      figures}
+    \item
+      \href{https://bookdown.org/yihui/bookdown/tables.html}{Inserting
+      tables}
+    \end{itemize}
+  \end{itemize}
+\item
+  Markdown resources
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://www.markdownguide.org/cheat-sheet/}{Markdown cheat
+    sheet}
+  \end{itemize}
+\item
+  Using markdown to prepare manuscripts/ write papers
+
+  \begin{itemize}
+  \item
+    \href{https://bookdown.org/yihui/rmarkdown-cookbook/latex-template.html}{Custom
+    templates in bookdown}
+  \item
+    \href{https://github.com/rstudio/rticles}{rticles R package}
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{example-project}{%
+\section{Example Project}\label{example-project}}
+
+\textbf{Project description}
+
+Get scared by doggo also cucumerro hide from vacuum cleaner so eat a rug
+and furry furry hairs everywhere oh no human coming lie on counter don't
+get off counter lick the other cats chirp at birds. Cats are fats i like
+to pets them they like to meow back annoy the old grumpy cat, start a
+fight and then retreat to wash when i lose and i'm going to lap some
+water out of my master's cup meow. Meowing chowing and wowing. Lay on
+arms while you're using the keyboard. Immediately regret falling into
+bathtub just going to dip my paw in your coffee and do a taste test - oh
+never mind i forgot i don't like coffee - you can have that back now.
+
+\hypertarget{response-variables}{%
+\subsection{Response variables}\label{response-variables}}
+
+Below are the instructions and code for getting data from wildtrax that
+was developed by Elly Knight. The original rScripts are available
+\href{https://github.com/baynelab-research/aru-data-processing-code}{here}.
+
+\emph{See the wildRtrax article here for more details on
+authentication:}
+\url{https://abbiodiversity.github.io/wildRtrax/articles/authenticating-into-wt.html}
+
+\hypertarget{get-data-from-wildtrax}{%
+\subsubsection{Get data from WildTrax}\label{get-data-from-wildtrax}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Load packages}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages(\textquotesingle{}remotes\textquotesingle{})}
+\CommentTok{\# remotes::install\_github(\textquotesingle{}ABbiodiversity/wildRtrax\textquotesingle{})}
+\FunctionTok{library}\NormalTok{(wildRtrax)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Login to WildTrax}
+\end{enumerate}
+
+NOTE: Edit the `loginexample.R' script to include your WildTrax login
+details and rename to `login.R'. DO NOT PUSH YOUR LOGIN TO GITHUB
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{config }\OtherTok{\textless{}{-}} \StringTok{"login.R"}
+\FunctionTok{source}\NormalTok{(config)}
+
+\FunctionTok{wt\_auth}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Get list of projects from WildTrax}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{projects }\OtherTok{\textless{}{-}} \FunctionTok{wt\_get\_download\_summary}\NormalTok{(}\AttributeTok{sensor\_id =} \StringTok{"ARU"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Download RUGR dataset summary report}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{dat.rugr }\OtherTok{\textless{}{-}} \FunctionTok{wt\_download\_report}\NormalTok{(}\AttributeTok{project\_id =} \DecValTok{1321}\NormalTok{, }\AttributeTok{sensor\_id =} \StringTok{"ARU"}\NormalTok{,}
+    \AttributeTok{weather\_cols =}\NormalTok{ T, }\AttributeTok{report =} \StringTok{"summary"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Download RUGR task report to check coordinate buffering}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{task.rugr }\OtherTok{\textless{}{-}} \FunctionTok{wt\_download\_report}\NormalTok{(}\AttributeTok{project\_id =} \DecValTok{1321}\NormalTok{, }\AttributeTok{sensor\_id =} \StringTok{"ARU"}\NormalTok{,}
+    \AttributeTok{report =} \StringTok{"task"}\NormalTok{)}
+\FunctionTok{table}\NormalTok{(task.rugr}\SpecialCharTok{$}\NormalTok{buffer)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Download multiple projects}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{projects.test }\OtherTok{\textless{}{-}} \FunctionTok{sample\_n}\NormalTok{(projects, }\DecValTok{3}\NormalTok{)}
+
+\NormalTok{dat.list }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{()}
+\NormalTok{error.log }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{()}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\FunctionTok{nrow}\NormalTok{(projects.test)) \{}
+
+\NormalTok{    dat.list[[i]] }\OtherTok{\textless{}{-}} \FunctionTok{try}\NormalTok{(}\FunctionTok{wt\_download\_report}\NormalTok{(}\AttributeTok{project\_id =}\NormalTok{ projects.test}\SpecialCharTok{$}\NormalTok{project\_id[i],}
+        \AttributeTok{sensor\_id =}\NormalTok{ projects.test}\SpecialCharTok{$}\NormalTok{sensorId[i], }\AttributeTok{weather\_cols =}\NormalTok{ F,}
+        \AttributeTok{report =} \StringTok{"summary"}\NormalTok{))}
+
+    \FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Finished dataset "}\NormalTok{, projects.test}\SpecialCharTok{$}\NormalTok{project[i],}
+        \StringTok{" : "}\NormalTok{, i, }\StringTok{" of "}\NormalTok{, }\FunctionTok{nrow}\NormalTok{(projects.test), }\StringTok{" projects"}\NormalTok{))}
+
+\NormalTok{\}}
+
+\NormalTok{dat.test }\OtherTok{\textless{}{-}} \FunctionTok{do.call}\NormalTok{(rbind, dat.list)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Save with metadata \& timestamp}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{save}\NormalTok{(dat, projects.test, error.log, }\AttributeTok{file =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"Data/wildtrax\_raw\_"}\NormalTok{,}
+    \FunctionTok{Sys.Date}\NormalTok{(), }\StringTok{".Rdata"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{predictor-variables}{%
+\subsection{Predictor variables}\label{predictor-variables}}
+
+\hypertarget{google-earth-engine-functions}{%
+\subsubsection{Google Earth Engine
+functions}\label{google-earth-engine-functions}}
+
+The following javascript functions can be used to extract Landsat
+variables within the Google Earth Engine code editor.
+
+\hypertarget{landsat}{%
+\paragraph*{Landsat}\label{landsat}}
+\addcontentsline{toc}{paragraph}{Landsat}
+
+Apply scaling factors
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exports}\OperatorTok{.}\AttributeTok{applyScaleFactors} \OperatorTok{=}\KeywordTok{function}\NormalTok{(image) \{}
+  \KeywordTok{var}\NormalTok{ opticalBands }\OperatorTok{=}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B.\textquotesingle{}}\NormalTok{)}\OperatorTok{.}\FunctionTok{multiply}\NormalTok{(}\FloatTok{0.0000275}\NormalTok{)}\OperatorTok{.}\FunctionTok{add}\NormalTok{(}\OperatorTok{{-}}\FloatTok{0.2}\NormalTok{)}\OperatorTok{;}
+  \KeywordTok{var}\NormalTok{ thermalBand }\OperatorTok{=}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}ST\_B6\textquotesingle{}}\NormalTok{)}\OperatorTok{.}\FunctionTok{multiply}\NormalTok{(}\FloatTok{0.00341802}\NormalTok{)}\OperatorTok{.}\FunctionTok{add}\NormalTok{(}\FloatTok{149.0}\NormalTok{)}\OperatorTok{;}
+  \ControlFlowTok{return}\NormalTok{ image}\OperatorTok{.}\FunctionTok{addBands}\NormalTok{(opticalBands}\OperatorTok{,} \KeywordTok{null}\OperatorTok{,} \KeywordTok{true}\NormalTok{)}
+              \OperatorTok{.}\FunctionTok{addBands}\NormalTok{(thermalBand}\OperatorTok{,} \KeywordTok{null}\OperatorTok{,} \KeywordTok{true}\NormalTok{)}\OperatorTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Cloud and snow mask
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exports}\OperatorTok{.}\AttributeTok{mask\_cloud\_snow} \OperatorTok{=}\KeywordTok{function}\NormalTok{(image) \{}
+    \KeywordTok{var}\NormalTok{ qa }\OperatorTok{=}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}QA\_PIXEL\textquotesingle{}}\NormalTok{)}\OperatorTok{;} 
+    \KeywordTok{var}\NormalTok{ cloudsBitMask }\OperatorTok{=}\NormalTok{ (}\DecValTok{1} \OperatorTok{\textless{}\textless{}} \DecValTok{3}\NormalTok{)}\OperatorTok{;} \CommentTok{// Get bit 3: cloud mask}
+    \KeywordTok{var}\NormalTok{ cloudShadowBitMask }\OperatorTok{=}\NormalTok{ (}\DecValTok{1} \OperatorTok{\textless{}\textless{}} \DecValTok{4}\NormalTok{)}\OperatorTok{;} \CommentTok{// Get bit 4: cloud shadow mask}
+    \KeywordTok{var}\NormalTok{ snowBitMask }\OperatorTok{=}\NormalTok{ (}\DecValTok{1} \OperatorTok{\textless{}\textless{}} \DecValTok{5}\NormalTok{)}\OperatorTok{;} \CommentTok{// Get bit 5: snow mask}
+    \KeywordTok{var}\NormalTok{ mask }\OperatorTok{=}\NormalTok{ qa}\OperatorTok{.}\FunctionTok{bitwiseAnd}\NormalTok{(cloudsBitMask)}\OperatorTok{.}\FunctionTok{eq}\NormalTok{(}\DecValTok{0}\NormalTok{)}\OperatorTok{.}\AttributeTok{and}
+\NormalTok{          (qa}\OperatorTok{.}\FunctionTok{bitwiseAnd}\NormalTok{(cloudShadowBitMask)}\OperatorTok{.}\FunctionTok{eq}\NormalTok{(}\DecValTok{0}\NormalTok{))}\OperatorTok{.}\AttributeTok{and}
+\NormalTok{          (qa}\OperatorTok{.}\FunctionTok{bitwiseAnd}\NormalTok{(snowBitMask)}\OperatorTok{.}\FunctionTok{eq}\NormalTok{(}\DecValTok{0}\NormalTok{))}\OperatorTok{;}
+\ControlFlowTok{return}\NormalTok{ image}\OperatorTok{.}\FunctionTok{updateMask}\NormalTok{(mask)}\OperatorTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Function to adding a calculated Leaf Area Index (LAI) band
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exports}\OperatorTok{.}\AttributeTok{addLAI} \OperatorTok{=}\KeywordTok{function}\NormalTok{(image) \{}
+  \KeywordTok{var}\NormalTok{ LAI }\OperatorTok{=}\NormalTok{ image}\OperatorTok{.}\FunctionTok{expression}\NormalTok{(}
+        \StringTok{\textquotesingle{}3.618 *(2.5 * ((NIR {-} RED) / (NIR + 6 * RED {-} 7.5 * BLUE + 1))){-}0.118\textquotesingle{}}\OperatorTok{,}\NormalTok{ \{}
+            \StringTok{\textquotesingle{}NIR\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B4\textquotesingle{}}\NormalTok{)}\OperatorTok{,}
+            \StringTok{\textquotesingle{}RED\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B3\textquotesingle{}}\NormalTok{)}\OperatorTok{,}
+            \StringTok{\textquotesingle{}BLUE\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B1\textquotesingle{}}\NormalTok{)}
+\NormalTok{        \})}\OperatorTok{.}\FunctionTok{rename}\NormalTok{(}\StringTok{\textquotesingle{}LAI\textquotesingle{}}\NormalTok{)}
+  \ControlFlowTok{return}\NormalTok{ image}\OperatorTok{.}\FunctionTok{addBands}\NormalTok{([LAI])}
+\NormalTok{\} }
+\end{Highlighting}
+\end{Shaded}
+
+Function to adding a calculated Bare Soil Index (BSI) band
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exports}\OperatorTok{.}\AttributeTok{addBSI} \OperatorTok{=}\KeywordTok{function}\NormalTok{(image) \{}
+  \KeywordTok{var}\NormalTok{ BSI }\OperatorTok{=}\NormalTok{image}\OperatorTok{.}\FunctionTok{expression}\NormalTok{(}
+        \StringTok{\textquotesingle{}((Red+SWIR) {-} (NIR+Blue)) / ((Red+SWIR) + (NIR+Blue))\textquotesingle{}}\OperatorTok{,}\NormalTok{ \{}
+          \StringTok{\textquotesingle{}NIR\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B4\textquotesingle{}}\NormalTok{)}\OperatorTok{,}
+          \StringTok{\textquotesingle{}Red\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B3\textquotesingle{}}\NormalTok{)}\OperatorTok{,}
+          \StringTok{\textquotesingle{}Blue\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B1\textquotesingle{}}\NormalTok{)}\OperatorTok{,}
+          \StringTok{\textquotesingle{}SWIR\textquotesingle{}}\OperatorTok{:}\NormalTok{ image}\OperatorTok{.}\FunctionTok{select}\NormalTok{(}\StringTok{\textquotesingle{}SR\_B5\textquotesingle{}}\NormalTok{) }
+\NormalTok{        \})}\OperatorTok{.}\FunctionTok{rename}\NormalTok{(}\StringTok{\textquotesingle{}BSI\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{return}\NormalTok{ image}\OperatorTok{.}\FunctionTok{addBands}\NormalTok{([BSI])}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{simulations}{%
+\subsection{Simulations}\label{simulations}}
+
+\hypertarget{bsims}{%
+\subsubsection{bSims}\label{bsims}}
+
+Simulations using bSims: Bird Point Count Simulator.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Install packages
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bSims"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(bSims)}
+
+\NormalTok{phi }\OtherTok{\textless{}{-}} \FloatTok{0.5}
+\NormalTok{tau }\OtherTok{\textless{}{-}} \DecValTok{1}\SpecialCharTok{:}\DecValTok{3}
+\NormalTok{dur }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{rbr }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{0.5}\NormalTok{, }\DecValTok{1}\NormalTok{, }\FloatTok{1.5}\NormalTok{, }\ConstantTok{Inf}\NormalTok{)}
+\NormalTok{tbr }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{)}
+
+\NormalTok{l }\OtherTok{\textless{}{-}} \FunctionTok{bsims\_init}\NormalTok{(}\DecValTok{10}\NormalTok{, }\FloatTok{0.5}\NormalTok{, }\DecValTok{1}\NormalTok{)}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{bsims\_populate}\NormalTok{(l, }\DecValTok{1}\NormalTok{)}
+\NormalTok{a }\OtherTok{\textless{}{-}} \FunctionTok{bsims\_animate}\NormalTok{(p, }\AttributeTok{vocal\_rate =}\NormalTok{ phi, }\AttributeTok{duration =}\NormalTok{ dur)}
+\NormalTok{o }\OtherTok{\textless{}{-}} \FunctionTok{bsims\_detect}\NormalTok{(a, }\AttributeTok{tau =}\NormalTok{ tau)}
+
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{bsims\_transcribe}\NormalTok{(o, }\AttributeTok{tint =}\NormalTok{ tbr, }\AttributeTok{rint =}\NormalTok{ rbr)}
+
+\FunctionTok{get\_table}\NormalTok{(x)}
+
+
+\FunctionTok{head}\NormalTok{(}\FunctionTok{get\_events}\NormalTok{(a))}
+\FunctionTok{head}\NormalTok{(}\FunctionTok{get\_detections}\NormalTok{(o))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{models}{%
+\subsection{Models}\label{models}}
+
+\hypertarget{import-data}{%
+\subsubsection{Import data}\label{import-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{data}\NormalTok{(mtcars)}
+\FunctionTok{head}\NormalTok{(mtcars)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+\end{verbatim}
+
+\hypertarget{linear-regression}{%
+\subsubsection{Linear Regression}\label{linear-regression}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ wt, }\AttributeTok{data =}\NormalTok{ mtcars)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{model-summary}{%
+\subsubsection{Model summary}\label{model-summary}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(model)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = mpg ~ wt, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  37.2851     1.8776  19.858  < 2e-16 ***
+## wt           -5.3445     0.5591  -9.559 1.29e-10 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.046 on 30 degrees of freedom
+## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10
+\end{verbatim}
+
+\hypertarget{model-plots}{%
+\subsubsection{Model plots}\label{model-plots}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+
+\CommentTok{\# Create a scatterplot}
+\FunctionTok{ggplot}\NormalTok{(mtcars, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ wt, }\AttributeTok{y =}\NormalTok{ mpg)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{,}
+    \AttributeTok{se =} \ConstantTok{FALSE}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Linear Regression of mpg vs wt"}\NormalTok{)}
+
+\FunctionTok{ggsave}\NormalTok{(}\StringTok{"3\_output/figures/regression.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{3_output/figures/regression} \caption{Regression figure.}\label{fig:regression}
+\end{figure}
+
+\hypertarget{make-predictions}{%
+\subsubsection{Make predictions}\label{make-predictions}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{predictions }\OtherTok{\textless{}{-}} \FunctionTok{predict}\NormalTok{(model, }\AttributeTok{newdata =} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{wt =} \FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}
+    \DecValTok{4}\NormalTok{)))}
+\NormalTok{predictions}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        1        2 
+## 21.25171 15.90724
+\end{verbatim}
+
+\end{document}
