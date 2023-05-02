@@ -5,6 +5,10 @@
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
 
+
+details new on markdown
+
+
 Below are the instructions and code for getting data from wildtrax that was developed by Elly Knight. The original rScripts are available [here](https://github.com/baynelab-research/aru-data-processing-code).
 
 *See the wildRtrax article here for more details on authentication:* <https://abbiodiversity.github.io/wildRtrax/articles/authenticating-into-wt.html>
